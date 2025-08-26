@@ -1,0 +1,42 @@
+/* --- Reset & Variables --- */
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Pretendard, sans-serif; background:#f8fafc; color:#111827; }
+
+:root{
+  --container: 1120px;
+  --radius: 12px;
+  --c-border: #e5e7eb;
+  --c-muted: #6b7280;
+  --c-primary: #2563eb;
+  --shadow-1: 0 6px 20px rgba(0,0,0,.04);
+}
+
+/* --- Layout --- */
+.container{ width: min(100% - 32px, var(--container)); margin-inline: auto; }
+.page{ min-height: 100vh; }
+.header{ position: sticky; top: 0; background:#fff; border-bottom:1px solid var(--c-border); padding:14px 0; z-index:10; margin-bottom:10px; }
+.section{ background:#fff; border:1px solid var(--c-border); border-radius:var(--radius); padding:16px; margin:16px 0; box-shadow: var(--shadow-1); }
+
+/* --- Stats --- */
+.stats{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:16px 0 20px; }
+.stat-card{ border:1px solid var(--c-border); border-radius:var(--radius); padding:16px 20px; background:#fff; box-shadow: var(--shadow-1); }
+.stat-title{ font-size:14px; color:var(--c-muted); margin-bottom:6px; }
+.stat-value{ font-size:24px; font-weight:700; }
+
+/* --- Table Head & Rows --- */
+.table-head{ display:grid; grid-template-columns:1fr 100px 100px 80px 64px; gap:8px; font-size:14px; color:var(--c-muted); padding-bottom:8px; border-bottom:1px solid #f1f5f9; margin-bottom:8px; }
+.course-row{ display:grid; grid-template-columns:1fr 100px 100px 80px 64px; gap:8px; align-items:center; margin-bottom:8px; }
+.input, .select{ padding:10px 12px; border:1px solid var(--c-border); border-radius:var(--radius); background:#fff; }
+.major-wrap{ display:inline-flex; gap:6px; align-items:center; color:#111827; }
+
+/* --- Buttons --- */
+.btn{ display:inline-flex; align-items:center; justify-content:center; height:44px; padding:0 14px; border-radius:var(--radius); cursor:pointer; font-weight:600; border:1px solid transparent; background:#fff; color:#111827; }
+.btn--primary{ background:var(--c-primary); color:#fff; }
+.btn--secondary{ border-color:var(--c-border); }
+.btn--danger{ border-color:#ef4444; color:#ef4444; background:#fff; height:36px; padding:0 10px; }
+
+/* --- Minor --- */
+.footer-note{ color:#9ca3af; margin:24px 0; }
+.grad-row{ display:flex; gap:12px; align-items:center; }
+.grad-left{ width:120px; }
